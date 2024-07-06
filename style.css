@@ -1,0 +1,618 @@
+/* ------------------UNIVERSAL-SELECTOR-------------------- */
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: "Lato", sans-serif;
+}
+:root{
+    --text-color:white;
+    --main-color:orangered;
+    --nav-color:rgb(15, 15, 61);
+    --letter:rgb(62, 56, 56);
+    --text-size:50px;
+}
+    /* ---------------STYLE FOR NAV BAR------------- */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:15px;
+}
+    /* ---------------STYLE FOR NAV BAR------------- */
+nav{
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding:20px 20px;
+    background-color: var(--nav-color);
+    z-index: 999;
+}
+/* ---------------STYLE FOR COMPANY NAME------------- */
+nav>h1{
+    font-size: 45px;
+    font-weight: bolder;
+    color: var(--main-color);
+}
+/* ---------------STYLE FOR MENU------------- */
+nav>ul{
+    display: flex;
+}
+nav>ul>li{
+    list-style: none;
+    background-color:black;
+    transform: skew(-25deg);
+    position: relative;
+    transition:all 0.5s ease;
+    color:var(--text-color);
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color:inherit;
+    display: block;
+    padding:15px 50px;
+    font-size: 20px;
+}
+nav>ul>li:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 1px solid white;
+}
+nav>ul>li:nth-child(2){
+    border-right: 1px solid white;
+}
+nav>ul>li:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 1px solid white;
+}
+/* ---------------STYLE FOR MENU HOVER-EFFECT------------- */
+nav>ul>li:hover{
+    background-color: var(--main-color);
+}
+/* ---------------STYLE FOR MENUBAR-ICON------------ */
+nav>label{
+    color: var(--main-color);
+    font-size: 40px;
+    display: none;
+}
+nav>input{
+    display: none;
+}
+.menu{
+    position: relative;
+    transition:all 2s;
+    display: none;
+}
+input:checked~menu{
+left:0;
+}
+/* ---------------STYLE FOR HEADER------------ */
+header{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+header>img{
+    width:100%;
+    height:100%;
+    filter: brightness(50%);
+    position: relative;
+}
+/* ---------------STYLE FOR HEADER-content------------  */    
+header>div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap:5%;
+}
+/* ---------------STYLE FOR HEADER-h2------------  */
+header>div>div>h2{
+    color:var(--text-color);
+    font-size:70px;
+    font-weight:bolder;
+    word-spacing: 5px;
+}
+/* ---------------STYLE FOR HEADER-BUTTON------------  */
+header>div>div:last-child{
+    display: flex;
+    gap:15px;
+    flex-wrap: wrap;
+}
+header>div>div>button{
+    padding:10px;
+    font-size: 20px;
+    border:none;
+    background-color: white;
+}
+header>div>div>button:last-child{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+/* ---------------STYLE FOR HEADER-BUTTON-HOVER-----------  */
+header>div>div>button:hover{
+    cursor: pointer;
+}
+/* ---------------STYLE FOR CHECK-IN BOX------------  */
+.checkbox{
+    padding:20px;
+    width:80%;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(80px, 1fr));
+    justify-content: space-between;
+    gap:10px;
+    background-color:var(--main-color);
+    position: relative;
+    top: -40px;
+    margin: 0 auto;
+    box-shadow:0 0 12px black; 
+}
+/* ---------------STYLE FOR CHECKBOX-INPUT------------  */
+.checkbox>input{
+    padding: 15px;
+}
+.checkbox>select{
+    padding: 15px;
+}
+/* ---------------STYLE FOR CHECKBOX-BUTTON------------  */
+.checkbox>button{
+    background-color:var(--nav-color);
+    color: var(--text-color);
+    font-weight:bolder ;
+    border:none;
+    font-size: medium;
+}
+/* ---------------STYLE FOR ARTICLE----------  */
+article{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    gap: 40px;
+}
+/* ---------------STYLE FOR ARTICLE-CONTENT-1--------  */
+.content-1{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+}
+.content-1>div:first-child{
+    width:45%;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+.content-1>div>h1{
+    font-size: var(--text-size);
+}
+.content-1>div>h1>span{
+    color: var(--main-color);
+}
+.content-1>div>p{
+    color:var(--letter);
+    font-size:17px;
+}
+/* ---------------STYLE FOR ARTICLE-CONTENT-1-RUNNING NUMBER-------  */
+.detail{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));    
+    gap:10px;
+}
+.detail>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 5px double grey;
+}
+.detail>div>i{
+    font-size:50px;
+    color: var(--main-color);
+}
+.detail>div>span{
+    font-size: 45px;
+}
+.detail>div>p{
+    color:var(--letter);
+}
+.content-1>div>button{
+    padding:10px;
+    font-size: 20px;
+    border:none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+/* ---------------STYLE FOR ARTICLE-CONTENT-1-IMAGES-------  */
+.content-1-pic{
+    width:45%;
+    display: grid;
+    grid-template-columns:50px 170px 200px 40px;
+    grid-template-rows: 50px 170px 150px 60px;
+    gap: 5px;
+    justify-content: center;
+}
+.content-1-pic>div>img{
+    object-fit: cover;
+    width: 100%;
+    height:100%;
+}
+/* --------STYLE FOR ARTICLE-CONTENT-1-IMAGES-ALIGN USING GRID------  */
+.content-1-pic>div:nth-child(1){
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.content-1-pic>div:nth-child(2){
+    grid-column: 3/5;
+    grid-row: 1/3;
+}
+.content-1-pic>div:nth-child(3){
+    grid-column:2/3;
+    grid-row: 3/4;
+}
+.content-1-pic>div:nth-child(4){
+    grid-column:3/4;
+    grid-row: 3/5;
+}
+/*------ HOVER EFFECT FOR FIRST CONTENT IMAGES-------- */
+.content-1-pic:hover .img-1:not(:hover){
+    cursor: pointer;
+    filter:grayscale(100%);
+    opacity:0.5;
+}
+/* ---------------STYLE FOR ARTICLE-CONTENT-2--------  */
+.content-2>h1{
+    font-size: var(--text-size);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.content-2>h1>span{
+    color:var(--main-color);
+}
+/* ---------------STYLE FOR ROOM CARDS--------  */
+.room{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.room>div{
+    width:350px;
+    height:430px;
+    box-shadow: 2px 2px 10px;
+}
+.room>div:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/* ---------------STYLE FOR ROOM CARDS- image-------  */
+.room>div>img{
+    width: 100%;
+    height:45%;
+}
+/* ---------------STYLE FOR ROOM CARDS- details-------  */
+.room-dtl{
+    height:55%;
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.room-dtl>div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.room-dtl>div>div>i{
+    color: orange;
+}
+.room-dtl>p{
+    color:var(--letter);
+}
+.room-dtl>p:nth-child(3){
+    font-size:medium;
+}
+.room-dtl>p>span{
+    padding: 0 10px;
+}
+.room-dtl>p>span>i{
+    color: var(--main-color);
+}
+.room-dtl>p>span:nth-child(2){
+    border:2px solid grey;
+    border-top: none;
+    border-bottom: none;
+}
+.room-dtl>div:last-child{
+    display: flex;
+    justify-content: space-between ;
+}
+.room-dtl>div>button{
+    color:var(--text-color);
+    padding: 15px 20px;
+    border: none;
+    background-color: var(--nav-color);
+}
+.room-dtl>div>button:hover{
+    cursor: pointer;
+}
+.room-dtl>div>button:nth-child(2){
+    background-color: var(--main-color);
+}
+    /* -----------------STYLE FOR THIRD CONTENT----------------- */
+.content-3{
+    display: flex;
+    color: var(--text-color);
+}
+.content-3-left{
+    background-color: var(--nav-color);
+    width:50%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:25px;
+    padding: 50px;
+}
+.content-3-left>div>h1{
+    font-size: var(--text-size);
+}
+.content-3-left>p{
+    font-size: 18px;
+}
+.content-3-left>div:last-child{
+    display: flex;
+    gap:15px;
+    flex-wrap: wrap;
+}
+.content-3-left>div>button{
+    padding:10px;
+    font-size: 20px;
+    border:none;
+    background-color: white;
+}
+.content-3-left>div>button:last-child{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+/* ---------------STYLE FOR CONTENT 3-BUTTON-HOVER-----------  */
+.content-3-left>div>button:hover{
+    cursor: pointer;
+}
+.content-3-img{
+    height: 450px;
+    width:50%;
+    background-image: url("./video.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-3-img>div{
+    height:100px;
+    width:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 50%;
+    color: black;
+    font-size: var(--text-size);
+    background-color: var(--main-color);
+    z-index: 2;
+}
+.content-3-img>div::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top:-20px;
+    left:-20px;
+    right:-20px;
+    bottom:-20px;
+    border:15px solid var(--main-color);
+    opacity:0;
+    z-index: 1;
+    animation: pulse 1.5s linear infinite;
+}
+@keyframes pulse{
+    0%{
+        transform:scale(0.5);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+    /* -----------------STYLE FOR FORTH CONTENT----------------- */
+.content-4>h1{
+    font-size: var(--text-size);  
+    text-align: center;
+    margin-bottom: 30px;  
+}
+.content-4>h1>span{
+    color: var(--main-color);
+}
+.content-4>div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));    
+    gap:30px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+}
+/*----------------- STYLE FOR FOURTH CONTENT ICON BOXES----------- */
+.content-4>div>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+    gap:16px;
+    border:2px solid black;
+    box-shadow: 2px 3px 10px;
+    transition: all 0.7s;
+}
+.content-4>div>div>i{
+    font-size:50px;
+    color:var(--main-color);
+}
+/*----------------- HOVER EFFECT FOR FOURTH CONTENT ICON BOXES----------- */
+.content-4>div>div:hover{
+    background-color: var(--nav-color);
+    color:var(--text-color);
+}
+    /* -----------------STYLE FOR FIFTH CONTENT----------------- */
+.content-5{
+    
+}
+/*STYLE FOR FIFTH CONTENT-HEADING*/
+.content-5>h1{
+    font-size: var(--text-size);  
+    text-align: center;
+    margin-bottom: 30px; 
+}
+.content-5>h1>span{
+    color: var(--main-color);
+}
+/*STYLE FOR FIFTH CONTENT-STAFF*/
+.content-5>div{
+    width:80%;
+}
+/*------------------- RESPONSIVE FOR MAX-WIDTH-400PX------------- */
+@media screen and (max-width:400px){ 
+            /*STYLE FOR RESPONSIVE-ARTICLE FIRST CONTENT-IMAGES */
+            .content-1-pic{
+                display: flex;
+                flex-direction: column;
+            }
+            .room>div{
+                width:250px;
+                height:330px;
+            }
+            /*STYLE FOR ROOM CARDS- details*/
+            .room-dtl>div>button{
+                padding: 5px 10px;                
+            }
+            .room-dtl>div:nth-child(1){
+                font-size: 10px;
+            }
+            .room-dtl>p:nth-child(3){
+                font-size:small;
+            }
+            .room-dtl>p>span{
+                padding: 0 5px;
+                font-size: small;
+            }
+            /* STYLE FOR RESPOSIVE SECOND CONTENT HEADING */
+            .content-2>h1{
+                font-size: 30px;
+            }
+            /* STYLE FOR RESPOSIVE THIRD CONTENT FIRST PART */
+            .content-3-left>div>h1{
+                font-size: 30px;
+            }
+            .content-3-left>p{
+                font-size: 10px;
+            }
+            .content-3-left>div:last-child{
+                gap:10px;    
+            }
+            .content-3-left>div>button{
+                padding:8px;
+                font-size: 15px;
+                border:none;
+                background-color: white;
+            }
+            /*STYLE FOR FORTH CONTENT-ICON BOXES*/
+            .content-4>div{
+                grid-template-columns: repeat(auto-fit,minmax(250px,1fr));    
+            }
+    }
+    
+/*------------------- RESPONSIVE FOR MAX-WIDTH-495PX------------- */
+@media screen and (max-width:495px){
+/* STYLE FOR RESPONSIVE-HEADER CONTENT*/
+    header>div{
+       top:100px;
+    }  
+/*STYLE FOR RESPONSIVE-ARTICLE FIRST CONTENT-IMAGES*/
+    .content-1-pic{
+        grid-template-columns:30px 150px 180px 20px;
+        grid-template-rows: 30px 150px 130px 40px;
+    }
+    /* STYLE FOR RESPOSIVE THIRD CONTENT FIRST PART */
+    .content-3-left{
+        gap:10px;
+    }
+    .content-3-left>div>h1{
+        font-size: 35px;
+    }
+    .content-3-left>p{
+        font-size: 18px;
+    }
+    .content-3-left>div:last-child{
+        gap:10px;    
+    }
+    }
+/*--------------------- RESPONSIVE FOR MAX-WIDTH-495PX------------- */
+@media screen and (max-width:900px){
+    /* STYLE FOR RESPOSIVE THIRD CONTENT FIRST PART */
+    .content-3{
+        flex-direction: column;
+    }
+    .content-3-left{
+        width:100%;
+    }
+    /* STYLE FOR RESPOSIVE THIRD CONTENT IMAGE */
+    .content-3-img{
+        width:100%;
+    }
+}
+/*--------------- RESPONSIVE FOR MAX-WIDTH-1025PX------------- */
+@media screen and (max-width:1025px){
+    /* STYLE FOR RESPONSIVE-MENUBAR */
+    label{
+        display: block;
+    }
+    nav>ul:nth-child(2){
+        display: none;
+    }
+    menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top:50px;
+        left:100%;
+    }
+}
+/*--------------- RESPONSIVE FOR MAX-WIDTH-1045PX------------- */
+@media screen and (max-width:1045px){
+    /*STYLE FOR RESPONSIVE-ARTICLE FIRST CONTENT*/
+    .content-1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-1>div:first-child{
+        width:70%;
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+    }
+    .content-1>div>h1{
+        font-size: 40px;
+    }
+    .content-1>div>h1>span{
+        color: var(--main-color);
+    }
+    .content-1>div>p{
+        color:var(--letter);
+        font-size:17px;
+    }
+}
