@@ -289,12 +289,12 @@ article{
     cursor: pointer;
     transform: scale(1.1);
 }
-/* ---------------STYLE FOR ROOM CARDS- image-------  */
+/*STYLE FOR ROOM CARDS- image*/
 .room>div>img{
     width: 100%;
     height:45%;
 }
-/* ---------------STYLE FOR ROOM CARDS- details-------  */
+/*STYLE FOR ROOM CARDS- details*/
 .room-dtl{
     height:55%;
     padding:15px;
@@ -379,7 +379,7 @@ article{
     background-color: var(--main-color);
     color: var(--text-color);
 }
-/* ---------------STYLE FOR CONTENT 3-BUTTON-HOVER-----------  */
+/*STYLE FOR CONTENT 3-BUTTON-HOVER*/
 .content-3-left>div>button:hover{
     cursor: pointer;
 }
@@ -447,7 +447,7 @@ article{
     align-items: center;
     padding: 0 60px;
 }
-/*----------------- STYLE FOR FOURTH CONTENT ICON BOXES----------- */
+/*STYLE FOR FOURTH CONTENT ICON BOXES*/
 .content-4>div>div{
     display: flex;
     flex-direction: column;
@@ -463,15 +463,12 @@ article{
     font-size:50px;
     color:var(--main-color);
 }
-/*----------------- HOVER EFFECT FOR FOURTH CONTENT ICON BOXES----------- */
+/*HOVER EFFECT FOR FOURTH CONTENT ICON BOXES*/
 .content-4>div>div:hover{
     background-color: var(--nav-color);
     color:var(--text-color);
 }
     /* -----------------STYLE FOR FIFTH CONTENT----------------- */
-.content-5{
-    
-}
 /*STYLE FOR FIFTH CONTENT-HEADING*/
 .content-5>h1{
     font-size: var(--text-size);  
@@ -483,7 +480,215 @@ article{
 }
 /*STYLE FOR FIFTH CONTENT-STAFF*/
 .content-5>div{
-    width:80%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+.content-5>div>div{
+    height:400px;
+    width:290px;
+    box-shadow: 2px 2px 9px;
+    position: relative;
+}
+.content-5>div>div:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.content-5>div>div>img{
+    width:100%;
+    height:75%;    
+}
+.content-5>div>div>div:nth-child(2){
+    position: absolute;
+    top:70%;
+    left:22%;
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}
+.content-5>div>div>div>div{
+    background-color: var(--main-color);
+    height:50px;
+    width:50px;
+    font-size: 30px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-5>div>div>div:last-child{
+    text-align: center;
+    margin-top: 40px;
+}
+/*---------------------------- STYLE FOR FOOTER------------------------ */
+footer{
+    padding: 20px 0;
+    background-color: var(--nav-color);
+    margin-top: 200px;
+    position:relative;
+}
+/* STYLE FOR FOOTER FIRST CONTENT */
+footer>div:first-child{
+    width:70%;
+    height:200px;
+    background-color:white;
+    border: 8px double grey;
+    position: absolute;
+    top:-100px;
+    left:15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+footer>div:first-child>h2>span{
+    color: var(--main-color);text-align: center;
+}
+footer>div:first-child>h2{
+    word-spacing: 5px;
+    font-size:30px;
+}
+footer>div:first-child>div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+footer>div:first-child>div>input{
+    padding: 10px;
+    width:400px;
+    font-size: medium;
+}
+footer>div:first-child>div>button{
+    padding:5px;
+    font-size: 20px;
+    color:var(--text-color);
+    border:none;
+    background-color: var(--main-color);
+    position: absolute;
+    left:63%;
+    top:10%;
+}
+/* STYLE FOR FOOTER INNER CONTENT */
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top:12%;
+    justify-content: space-between;
+    width: 85%;
+}
+.foot>div:nth-child(1){
+    width:350px;
+    height:200px;
+    padding:20px;
+    background-color: var(--main-color);
+}
+.foot>div:nth-child(1)>h1{
+    color: var(--text-color);
+    margin: 10px 0;
+}
+.foot>div:nth-child(1)>p{
+    color: var(--text-color);
+    font-size: 18px;
+    margin: 5px 0;
+}
+.foot>div:nth-child(1)>p>span{
+    color: var(--nav-color);
+}
+.contact{
+    padding: 0 15px;
+    margin-top: 20px;
+}
+.contact>p {
+    color:var(--main-color);
+    margin-bottom: 15px;
+    font-size: large;
+    font-weight: bolder;
+}
+.contact>ul {
+    color: aliceblue;
+    list-style: none;
+}
+
+.contact>ul>li>i {
+    margin-right: 10px;
+}
+
+.contact>ul>li {
+    margin-bottom: 10px;
+}
+/*---------------------- STYLE FOR ABOUT,SERVICE,CONTACT PAGE------------------- */
+.about{
+    margin-top: 120px;
+}
+.enquire{
+    width:85%;
+    margin:0 auto;
+}
+.enquire>h1{
+    font-size: var(--text-size);
+    text-align: center;
+}
+.enquire>h1>span{
+    color:var(--main-color);
+}
+.enquire>div:nth-child(2){
+    display: flex;
+    gap:50px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.enquire>div>div>h2{
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+.enquire>div>div>p>i{
+    color: var(--main-color);
+}
+.enquire>div:nth-child(3){
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+iframe{
+    width:49%;
+}
+.enquire>div>form{
+    width:49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.enquire>div>form>input{
+    width: 90%;
+    padding:20px;
+    font-size: 15px;
+}
+.enquire>div>form>div{
+    display: flex;
+    gap: 2%;
+}
+.enquire>div>form>div>input{
+    width: 44%;
+    padding:20px;
+    font-size: 15px;
+}
+.enquire>div>form>textarea{
+    width:90%;
+    height:160px;
+    padding:15px;
+    font-size: 15px;
+}
+.enquire>div>form>button{
+    width:90%;
+    padding:15px;
+    font-size: 15px;
+    background-color: var(--main-color);
+    border:none;
+    color: var(--text-color);
 }
 /*------------------- RESPONSIVE FOR MAX-WIDTH-400PX------------- */
 @media screen and (max-width:400px){ 
@@ -534,7 +739,19 @@ article{
             .content-4>div{
                 grid-template-columns: repeat(auto-fit,minmax(250px,1fr));    
             }
+            footer>div:first-child>div>input{
+                font-size: small;
+            }
+            /*STYLE FOR FIFTH CONTENT-TOP BOXES*/
+            footer>div:first-child>div>button{
+                padding:2px;
+                font-size: 15px;
+                position: absolute;
+                left:10%;
+                bottom:10%;
+            }
     }
+
     
 /*------------------- RESPONSIVE FOR MAX-WIDTH-495PX------------- */
 @media screen and (max-width:495px){
@@ -561,7 +778,24 @@ article{
         gap:10px;    
     }
     }
-/*--------------------- RESPONSIVE FOR MAX-WIDTH-495PX------------- */
+/*--------------------- RESPONSIVE FOR MAX-WIDTH-650PX------------- */
+@media screen and (max-width:650px){
+    /*STYLE FOR FIFTH CONTENT-TOP BOXES*/
+    footer>div:first-child>div>input{
+        width:90%;
+    }
+}
+/*--------------- RESPONSIVE FOR MAX-WIDTH-680PX------------- */
+
+@media screen and (max-width:680px){
+    /*STYLE FOR FIFTH CONTENT-TOP BOXES*/
+    footer>div:first-child>div>button{
+        position: absolute;
+        right:7%;
+        bottom:10%;
+    }
+}
+/*--------------------- RESPONSIVE FOR MAX-WIDTH-900PX------------- */
 @media screen and (max-width:900px){
     /* STYLE FOR RESPOSIVE THIRD CONTENT FIRST PART */
     .content-3{
@@ -573,6 +807,14 @@ article{
     /* STYLE FOR RESPOSIVE THIRD CONTENT IMAGE */
     .content-3-img{
         width:100%;
+    }
+    .foot{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top:20%;
+        justify-content: space-between;
+        width: 85%;
     }
 }
 /*--------------- RESPONSIVE FOR MAX-WIDTH-1025PX------------- */
@@ -615,4 +857,46 @@ article{
         color:var(--letter);
         font-size:17px;
     }
+    .enquire>div:nth-child(3){
+        flex-direction: column;
+    }
+    iframe{
+        width:100%;
+    }
+    .enquire>div>form{
+        width:100%;
+        margin-top:20px;
+        gap:15px;
+    }
+    .enquire>div>form>input{
+        width: 100%;
+    }
+    .enquire>div>form>div>input{
+        width: 98%;
+    }
+    .enquire>div>form>textarea{
+        width:100%;
+        height:160px;
+        padding:15px;
+        font-size: 15px;
+    }
+    .enquire>div>form>button{
+        width:100%;
+        padding:15px;
+        font-size: 15px;
+        background-color: var(--main-color);
+        border:none;
+        color: var(--text-color);
+    }
+}
+@media screen and (min-width:300px)and(max-width:400px){
+    .foot{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top:50%;
+        justify-content: space-between;
+        width: 85%;
+    }
+    
 }
